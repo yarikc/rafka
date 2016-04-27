@@ -15,7 +15,14 @@ with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
 requirements = [
-    # TODO: put package requirements here
+  "falcon==0.3.0",
+  "gevent==1.1.0",
+  "greenlet==0.4.9",
+  "kazoo==2.2.1",
+  "pykafka==2.3.1",
+  "python-mimeparse==1.5.1",
+  "six==1.10.0",
+  "tabulate==0.7.5"
 ]
 
 test_requirements = [
@@ -39,7 +46,9 @@ setup(
     install_requires=requirements,
     license="ISCL",
     zip_safe=False,
-    keywords='rafka',
+    keywords=[
+        'kafka', 'falcon', 'rest', 'proxy', 'server'
+    ],
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',
@@ -54,5 +63,10 @@ setup(
         'Programming Language :: Python :: 3.5',
     ],
     test_suite='tests',
-    tests_require=test_requirements
+    tests_require=test_requirements,
+    entry_points={
+        'console_scripts': [
+            'rafka = rafka.rafka:main'
+        ]
+    }
 )

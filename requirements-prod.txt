@@ -1,0 +1,8 @@
+falcon==0.3.0
+gevent==1.1.0
+greenlet==0.4.9
+kazoo==2.2.1
+pykafka==2.3.1
+python-mimeparse==1.5.1
+six==1.10.0
+tabulate==0.7.5
